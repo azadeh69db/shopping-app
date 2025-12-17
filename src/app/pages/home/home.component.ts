@@ -9,6 +9,7 @@ import { SpecialProductsComponent } from '../../shared/special-products/special-
 import { RecentStoryComponent } from '../../shared/recent-story/recent-story.component';
 import { ServiceboxComponent } from '../../shared/servicebox/servicebox.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,7 +17,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
     HerosliderComponent,TrendingProducts1Component,
     TendingProducts2Component,ZoomimgComponent ,
     SpecialProductsComponent,RecentStoryComponent
-    ,ServiceboxComponent,FooterComponent
+    ,ServiceboxComponent,FooterComponent,RouterLink
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
