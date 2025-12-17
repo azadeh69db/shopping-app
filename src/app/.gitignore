@@ -1,0 +1,14 @@
+# Node modules
+/node_modules
+
+# Angular build output
+/dist
+/.angular
+
+# Environment files
+/src/environments/*.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+

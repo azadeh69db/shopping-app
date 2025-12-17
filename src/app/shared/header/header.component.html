@@ -1,0 +1,111 @@
+<mat-toolbar class="text-sm">
+    <div class="example-spacer text-sm  flex items-center space-x-4">
+ <span >Welcome to Our store Multikart</span>
+ <mat-icon  aria-label="Example contact icon" fontIcon="phone_in_talk " style="color: red;"></mat-icon>
+   <span >Call Us: 123 - 456 - 7890</span>
+    </div>
+
+    <div class="exampleright text-sm flex items-center space-x-4  ">
+ 
+
+<a href="#" class="flex items-center space-x-2 group" >
+ 
+ <mat-icon class="group-hover:text-red-500" aria-label="Example compare_arrows icon" fontIcon="compare_arrows  "></mat-icon>
+ <span  class="group-hover:text-red-500" >compare</span>
+  </a>
+
+  <a href="#" class="flex items-center space-x-2 group" >
+ 
+ <mat-icon class="group-hover:text-red-500" aria-label="Example favorite" fontIcon="favorite  "></mat-icon>
+ <span  class="group-hover:text-red-500" >Wishlist</span>
+  </a>
+
+   <a href="#" class="flex items-center space-x-2 group" >
+ 
+ <mat-icon class="group-hover:text-red-500" aria-label="person" fontIcon="person  "></mat-icon>
+
+  </a>
+
+<button class="flex items-center bg-gray-200 p-2" matButton [matMenuTriggerFor]="toolbarmenu">  Menu <mat-icon  aria-label="keyboard_arrow_down" fontIcon="keyboard_arrow_down "></mat-icon>
+</button>
+<mat-menu #toolbarmenu="matMenu">
+
+  <button mat-menu-item>Login</button>
+  <button mat-menu-item>Logout</button>
+</mat-menu>
+    </div>
+ 
+ 
+</mat-toolbar>
+
+
+<mat-toolbar class="  text-sm " style="background-color: #fff;">
+  
+    <div class="example-spacer text-sm  flex items-center space-x-4 ">
+ <button class="flex items-center bg-gray-200 p-2" matButton [matMenuTriggerFor]="menu">   <mat-icon  aria-label="menu" fontIcon="menu "></mat-icon>
+  
+</button>
+      <img src="./assets/multikart-logo.png" alt="">
+
+<mat-menu #menu="matMenu">
+
+  <div class="back flex items-center">
+<mat-icon  aria-label="keyboard_arrow_left" fontIcon="keyboard_arrow_left "></mat-icon>
+
+  <button mat-menu-item>Back</button>
+  </div>
+ <hr>
+  <button mat-menu-item>Home</button>
+  <div class="colection flex items-center">
+<button mat-menu-item matButton [matMenuTriggerFor]="collectmenu">Collection</button>
+<mat-menu #collectmenu="matMenu">
+
+  <button mat-menu-item>electronic</button>
+  <button mat-menu-item>jewelery</button>
+    <button mat-menu-item>mens clothing</button>
+        <button mat-menu-item>womens clothing</button>
+
+</mat-menu>
+  </div>
+    
+
+    <button mat-menu-item>Cart</button>
+    <button mat-menu-item>Checkout</button>
+</mat-menu>
+    </div>
+
+    <div class="exampleright text-sm flex items-center space-x-4  ">
+ <a href="#" class="flex items-center space-x-2 group" >
+  <button  class="group-hover:text-red-500" matButton [matMenuTriggerFor]="homemenu">Home</button>
+<mat-menu #homemenu="matMenu">
+
+  <button mat-menu-item>electronic</button>
+  <button mat-menu-item>jewelery</button>
+    <button mat-menu-item>mens clothing</button>
+        <button mat-menu-item>womens clothing</button>
+</mat-menu>
+ <mat-icon class="group-hover:text-red-500"matButton [matMenuTriggerFor]="homemenu" aria-label="Examplekeyboard_arrow_down icon" fontIcon="keyboard_arrow_down  "></mat-icon>
+
+
+  </a>
+
+ 
+ <mat-icon class="group-hover:text-red-500" aria-label="Example searchicon" fontIcon="search "></mat-icon>
+
+
+  
+ 
+ <mat-icon class="group-hover:text-red-500" aria-label="shopping_cart" fontIcon="shopping_cart "></mat-icon>
+
+
+
+
+    </div>
+ 
+ 
+</mat-toolbar>
+
+
+
+
+

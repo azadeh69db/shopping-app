@@ -1,0 +1,39 @@
+
+<div class="relative overflow-hidden h-[80vh] min-h-[400px] bg-gray-900">
+  <!-- اسلایدها -->
+  <div *ngFor="let slide of slides; let i = index"
+       [class.hidden]="i !== currentSlide"
+       class="absolute inset-0 flex flex-col md:flex-row items-center justify-between px-6 md:px-12 transition-opacity duration-700">
+
+    <!-- متن سمت چپ -->
+    <div class="md:w-1/2 text-white space-y-6">
+      <h2 class="text-3xl md:text-5xl font-bold">{{ slide.title }}</h2>
+      <p class="text-lg md:text-2xl">{{ slide.description }}</p>
+      <a [href]="slide.buttonUrl"
+         class="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition">
+        {{ slide.buttonText }}
+      </a>
+    </div>
+
+    <!-- تصویر سمت راست -->
+    <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center">
+      <img [src]="slide.image" [alt]="slide.title" class="w-full h-auto object-cover rounded-lg shadow-lg">
+    </div>
+  </div>
+
+  <!-- دکمه‌های next/prev -->
+  <button (click)="prev()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full">
+    ‹
+  </button>
+  <button (click)="next()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full">
+    ›
+  </button>
+
+  <!-- دایره‌ها (dots) -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
+    <button *ngFor="let s of slides; let i = index" (click)="goTo(i)"
+      class="w-3 h-3 md:w-4 md:h-4 rounded-full transition-all"
+      [ngClass]="i === currentSlide ? 'bg-white' : 'bg-white/50'">
+    </button>
+  </div>
+</div>
