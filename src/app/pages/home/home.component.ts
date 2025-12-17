@@ -8,6 +8,7 @@ import { ZoomimgComponent } from '../../shared/zoomimg/zoomimg.component';
 import { SpecialProductsComponent } from '../../shared/special-products/special-products.component';
 import { RecentStoryComponent } from '../../shared/recent-story/recent-story.component';
 import { ServiceboxComponent } from '../../shared/servicebox/servicebox.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -15,7 +16,7 @@ import { ServiceboxComponent } from '../../shared/servicebox/servicebox.componen
     HerosliderComponent,TrendingProducts1Component,
     TendingProducts2Component,ZoomimgComponent ,
     SpecialProductsComponent,RecentStoryComponent
-    ,ServiceboxComponent
+    ,ServiceboxComponent,FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
