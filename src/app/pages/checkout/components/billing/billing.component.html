@@ -1,15 +1,115 @@
-<div class="path flex justify-between p-5 bg-gray-300 mb-10">
-    <h2 class="text-4xl">Checkout</h2>
-    <h2 class="text-xl">Home/Checkout</h2>
-</div>
+
 <div class="billing p-7">
 <p class="text-3xl mb-10">billing works!</p>
-<form class="example-form">
+
+<form class="example-form flex flex-col space-y-6">
   <mat-form-field class="example-full-width">
-    <mat-label>firstName</mat-label>
+    <mat-label>FirstName</mat-label>
+    <input matInput >
+  </mat-form-field>
+   <mat-form-field class="example-full-width">
+    <mat-label>LastName</mat-label>
     <input matInput >
   </mat-form-field>
 
- 
+  <mat-form-field class="example-full-width">
+    <mat-label>Phone</mat-label>
+    <input matInput >
+  </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput >
+  </mat-form-field>
+
+  <mat-form-field>
+  <mat-label>SelectCountry</mat-label>
+  <select matNativeControl required>
+    <option value="volvo">Australia</option>
+    <option value="saab">India</option>
+    <option value="mercedes">Usa</option>
+  </select>
+</mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <mat-label>Address</mat-label>
+    <input matInput >
+  </mat-form-field>
+   <mat-form-field class="example-full-width">
+    <mat-label>City</mat-label>
+    <input matInput >
+  </mat-form-field>
+   <mat-form-field class="example-full-width">
+    <mat-label>State</mat-label>
+    <input matInput >
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>PostalCode</mat-label>
+  <input matInput>
+  </mat-form-field>
+
+
+</form>
+
+<div class="formtwo">
+  
+</div>
+
+<form action="" class="bg-gray-100 p-2 mb-8">
+  <h3><strong>STRIPE JS</strong></h3>
+  <h2>DUMMY TEST</h2>
+  <div class="row flex justify-between pb-3">
+    
+ <p class="text-xs" >CARTNUMBER</p>
+    <p class="text-xs">4242424242424242</p>
+
+  </div>
+
+  <hr>
+ <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >MM/YY</p>
+    <p class="text-xs">2/2020</p>
+
+  </div>
+  <hr>
+
+  <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >CVC</p>
+    <p class="text-xs">2222</p>
+
+  </div>
+  <hr>
+</form>
+
+
+<form action="" class="bg-gray-100 p-2">
+  <h3><strong>PAYPAL</strong></h3>
+  <h2>DUMMY TEST</h2>
+  <div class="row flex justify-between pb-3">
+    
+ <p class="text-xs" >CARTNUMBER</p>
+    <p class="text-xs">	4152521541244</p>
+
+  </div>
+
+  <hr>
+ <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >MM/YY</p>
+    <p class="text-xs">	11/18</p>
+
+  </div>
+  <hr>
+
+  <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >CVC</p>
+    <p class="text-xs">521</p>
+
+  </div>
+  
 </form>
 </div>

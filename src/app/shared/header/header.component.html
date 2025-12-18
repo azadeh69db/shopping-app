@@ -55,7 +55,7 @@
   <button mat-menu-item>Back</button>
   </div>
  <hr>
-  <button mat-menu-item>Home</button>
+  <button mat-menu-item   routerLink="">Home</button>
   <div class="colection flex items-center">
 <button mat-menu-item matButton [matMenuTriggerFor]="collectmenu">Collection</button>
 <mat-menu #collectmenu="matMenu">
@@ -76,7 +76,7 @@
 
     <div class="exampleright text-sm flex items-center space-x-4  ">
  <a href="#" class="flex items-center space-x-2 group" >
-  <button  class="group-hover:text-red-500" matButton [matMenuTriggerFor]="homemenu">Home</button>
+  <button  class="group-hover:text-red-500" matButton [matMenuTriggerFor]="homemenu"  routerLink="">Home</button>
 <mat-menu #homemenu="matMenu">
 
   <button mat-menu-item>electronic</button>
