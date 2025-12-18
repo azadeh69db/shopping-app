@@ -187,7 +187,7 @@
     <!-- Postal Code -->
     <mat-form-field class="example-full-width">
       <mat-label>Postal Code</mat-label>
-      <input matInput formControlName="postalCode" placeholder="5karacter">
+      <input matInput formControlName="postalCode" placeholder="5caracter">
       <mat-error *ngIf="f['postalCode'].invalid && (f['postalCode'].dirty || f['postalCode'].touched || submitted)">
         <span *ngIf="f['postalCode'].errors?.['required']">کدپستی الزامی است</span>
         <span *ngIf="f['postalCode'].errors?.['pattern']">کدپستی معتبر نیست باید</span>
