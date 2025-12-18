@@ -28,6 +28,7 @@ export class BillingComponent implements OnInit{
       city: ['', Validators.required],
       state: ['', Validators.required],
       postalCode: ['', [Validators.required, Validators.pattern('^[0-9]{5}$')]],
+      country: ['', Validators.required]
     });
   }
 
