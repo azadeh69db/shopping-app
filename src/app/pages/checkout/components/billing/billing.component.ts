@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, input, OnInit, Output } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import { FormBuilder,FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,7 +21,7 @@ export class BillingComponent implements OnInit{
 
   billingForm!: FormGroup;
   submitted = false;
-selectedPayment: string='';
+@Input()selectedPayment: string='';
 
   constructor(private fb: FormBuilder) {}
 
