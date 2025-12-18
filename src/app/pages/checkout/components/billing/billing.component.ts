@@ -3,11 +3,14 @@ import {MatInputModule} from '@angular/material/input';
 import { FormBuilder,FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CommonModule } from '@angular/common';
+import { MatSelectModule } from '@angular/material/select';
+
 @Component({
   selector: 'app-billing',
   standalone: true,
   imports: [MatInputModule,ReactiveFormsModule ,MatButtonModule
-    ,MatFormFieldModule
+    ,MatFormFieldModule,CommonModule, MatSelectModule
   ],
   templateUrl: './billing.component.html',
   styleUrl: './billing.component.css'
@@ -37,9 +40,10 @@ export class BillingComponent implements OnInit{
   }
 
   // گتتر کوتاه برای دسترسی به کنترل‌ها در HTML
-  get f() {
-    return this.billingForm.controls;
-  }
+ 
+get f(): { [key: string]: import("@angular/forms").AbstractControl } {
+  return this.billingForm.controls;
+}
 
   onSubmit() {
     this.submitted = true;
