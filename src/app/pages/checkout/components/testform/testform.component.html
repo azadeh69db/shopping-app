@@ -1,0 +1,81 @@
+
+<!-- 
+<form action="" class="bg-gray-100 p-2 m-10 mb-8">
+  <h3><strong>STRIPE JS</strong></h3>
+  <h2>DUMMY TEST</h2>
+  <div class="row flex justify-between pb-3">
+    
+ <p class="text-xs" >CARTNUMBER</p>
+    <p class="text-xs">4242424242424242</p>
+
+  </div>
+
+  <hr>
+ <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >MM/YY</p>
+    <p class="text-xs">2/2020</p>
+
+  </div>
+  <hr>
+
+  <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >CVC</p>
+    <p class="text-xs">2222</p>
+
+  </div>
+  <hr>
+</form>
+<form action="" class="bg-gray-100 p-2 m-10">
+  <h3><strong>PAYPAL</strong></h3>
+  <h2>DUMMY TEST</h2>
+  <div class="row flex justify-between pb-3">
+    
+ <p class="text-xs" >CARTNUMBER</p>
+    <p class="text-xs">	4152521541244</p>
+
+  </div>
+
+  <hr>
+ <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >MM/YY</p>
+    <p class="text-xs">	11/18</p>
+
+  </div>
+  <hr>
+
+  <div class="row flex justify-between  pb-3">
+    
+ <p class="text-xs" >CVC</p>
+    <p class="text-xs">521</p>
+
+  </div>
+  
+</form> -->
+<form class="bg-gray-100 p-2 m-10">
+  <h3><strong>روش پرداخت انتخاب شده:</strong> {{ selectedPayment }}</h3>
+
+  <div class="row flex justify-between pb-3">
+    <p class="text-xs">CARTNUMBER</p>
+    <p class="text-xs">
+      {{ selectedPayment === 'stripe' ? '4242424242424242' : '4152521541244' }}
+    </p>
+  </div>
+
+  <hr>
+  <div class="row flex justify-between pb-3">
+    <p class="text-xs">MM/YY</p>
+    <p class="text-xs">
+      {{ selectedPayment === 'stripe' ? '2/2020' : '11/18' }}
+    </p>
+  </div>
+  <hr>
+  <div class="row flex justify-between pb-3">
+    <p class="text-xs">CVC</p>
+    <p class="text-xs">
+      {{ selectedPayment === 'stripe' ? '2222' : '521' }}
+    </p>
+  </div>
+</form>

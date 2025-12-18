@@ -9,7 +9,7 @@
 
     </div>
     <div class="paypall w-1/2">
-<app-paypalform></app-paypalform>
+<app-paypalform (paymentChanged)="selectedPayment=$event"></app-paypalform>
     </div>
 </div>
 <app-footer></app-footer>

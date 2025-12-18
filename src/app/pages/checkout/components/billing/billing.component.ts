@@ -5,12 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
-
+import { TestformComponent } from '../testform/testform.component';
 @Component({
   selector: 'app-billing',
   standalone: true,
   imports: [MatInputModule,ReactiveFormsModule ,MatButtonModule
-    ,MatFormFieldModule,CommonModule, MatSelectModule
+    ,MatFormFieldModule,CommonModule, MatSelectModule,TestformComponent
   ],
   templateUrl: './billing.component.html',
   styleUrl: './billing.component.css'
@@ -21,6 +21,7 @@ export class BillingComponent implements OnInit{
 
   billingForm!: FormGroup;
   submitted = false;
+selectedPayment: string='';
 
   constructor(private fb: FormBuilder) {}
 

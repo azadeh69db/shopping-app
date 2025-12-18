@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaypalformComponent } from './paypalform.component';
+import { TestformComponent } from './testform.component';
 
-describe('PaypalformComponent', () => {
-  let component: PaypalformComponent;
-  let fixture: ComponentFixture<PaypalformComponent>;
+describe('TestformComponent', () => {
+  let component: TestformComponent;
+  let fixture: ComponentFixture<TestformComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PaypalformComponent]
+      imports: [TestformComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PaypalformComponent);
+    fixture = TestBed.createComponent(TestformComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

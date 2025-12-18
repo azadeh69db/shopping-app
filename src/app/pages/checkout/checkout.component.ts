@@ -13,5 +13,5 @@ import { PaypalformComponent } from './components/paypalform/paypalform.componen
   styleUrl: './checkout.component.css'
 })
 export class CheckoutComponent {
-
+selectedPayment:string ='';
 }
