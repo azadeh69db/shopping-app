@@ -1,10 +1,14 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
-import { FormBuilder,FormGroup,Validator, Validators } from '@angular/forms';
+import { FormBuilder,FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @Component({
   selector: 'app-billing',
   standalone: true,
-  imports: [MatInputModule ],
+  imports: [MatInputModule,ReactiveFormsModule ,MatButtonModule
+    ,MatFormFieldModule
+  ],
   templateUrl: './billing.component.html',
   styleUrl: './billing.component.css'
 })
@@ -45,8 +49,13 @@ export class BillingComponent implements OnInit{
       this.formValid.emit(this.billingForm);
       console.log(this.billingForm.value);
     }
+      else {
+      console.log('Form Invalid');
+    }
+
+    }
   }
-}
+
 
  
   

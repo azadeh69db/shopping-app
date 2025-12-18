@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="billing p-7">
 <p class="text-3xl mb-10">billing works!</p>
 
@@ -110,4 +110,105 @@
   </div>
   
 </form>
+</div> -->
+
+<div class="billing p-7">
+  <p class="text-3xl mb-10">Billing works!</p>
+
+  <form [formGroup]="billingForm" (ngSubmit)="onSubmit()" class="example-form flex flex-col space-y-6">
+
+    <!-- First Name -->
+    <mat-form-field class="example-full-width">
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName">
+      <mat-error *ngIf="f.firstName.invalid && (f.firstName.dirty || f.firstName.touched || submitted)">
+        <span *ngIf="f.firstName.errors?.required">نام الزامی است</span>
+        <span *ngIf="f.firstName.errors?.minlength">حداقل ۲ کاراکتر لازم است</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Last Name -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastName">
+      <mat-error *ngIf="f.lastName.invalid && (f.lastName.dirty || f.lastName.touched || submitted)">
+        <span *ngIf="f.lastName.errors?.required">نام خانوادگی الزامی است</span>
+        <span *ngIf="f.lastName.errors?.minlength">حداقل ۲ کاراکتر لازم است</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Phone -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone">
+      <mat-error *ngIf="f.phone.invalid && (f.phone.dirty || f.phone.touched || submitted)">
+        <span *ngIf="f.phone.errors?.required">تلفن الزامی است</span>
+        <span *ngIf="f.phone.errors?.pattern">تلفن فقط شامل اعداد باشد</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Email -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+      <mat-error *ngIf="f.email.invalid && (f.email.dirty || f.email.touched || submitted)">
+        <span *ngIf="f.email.errors?.required">ایمیل الزامی است</span>
+        <span *ngIf="f.email.errors?.email">ایمیل معتبر نیست</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Address -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <input matInput formControlName="address">
+      <mat-error *ngIf="f.address.invalid && (f.address.dirty || f.address.touched || submitted)">
+        آدرس الزامی است
+      </mat-error>
+    </mat-form-field>
+
+    <!-- City -->
+    <mat-form-field class="example-full-width">
+      <mat-label>City</mat-label>
+      <input matInput formControlName="city">
+      <mat-error *ngIf="f.city.invalid && (f.city.dirty || f.city.touched || submitted)">
+        شهر الزامی است
+      </mat-error>
+    </mat-form-field>
+
+    <!-- State -->
+    <mat-form-field class="example-full-width">
+      <mat-label>State</mat-label>
+      <input matInput formControlName="state">
+      <mat-error *ngIf="f.state.invalid && (f.state.dirty || f.state.touched || submitted)">
+        استان الزامی است
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Postal Code -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Postal Code</mat-label>
+      <input matInput formControlName="postalCode">
+      <mat-error *ngIf="f.postalCode.invalid && (f.postalCode.dirty || f.postalCode.touched || submitted)">
+        <span *ngIf="f.postalCode.errors?.required">کدپستی الزامی است</span>
+        <span *ngIf="f.postalCode.errors?.pattern">کدپستی معتبر نیست</span>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Country -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Select Country</mat-label>
+      <select matNativeControl formControlName="country">
+        <option value="" disabled selected>انتخاب کنید</option>
+        <option value="Australia">Australia</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+      </select>
+      <mat-error *ngIf="f.country.invalid && (f.country.dirty || f.country.touched || submitted)">
+        کشور الزامی است
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Submit Billing</button>
+  </form>
 </div>
+
