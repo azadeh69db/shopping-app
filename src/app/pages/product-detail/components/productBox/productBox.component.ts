@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-
+import { TimerComponent } from '../Timer/Timer.component';
 @Component({
   selector: 'app-productBox',
   standalone: true,
-  imports: [],
+  imports: [TimerComponent],
   templateUrl: './productBox.component.html',
   styleUrl: './productBox.component.css'
 })
