@@ -11,7 +11,7 @@
   <div class="row">
     <h3 class="text-red-600 text-xl">In Stock</h3>
     <h3>quantity</h3>
-    <div class="flex items-center gap-3 mt-8 ">
+    <div class="flex items-center gap-3 mt-8">
       <button
         (click)="decrease()"
         class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 active:scale-90 disabled:opacity-40 disabled:cursor-not-allowed"
@@ -34,13 +34,39 @@
         ▶
       </button>
     </div>
-     <div class="button flex mt-5 ">
- <button class="bg-red-500 mr-5 p-3">Add To Cart</button>
-    <button class="bg-red-500 p-3">BuyNow</button>
-     </div>
-   
+    <div class="button flex mt-5">
+      <button class="bg-red-500 mr-5 p-3">Add To Cart</button>
+      <button class="bg-red-500 p-3">BuyNow</button>
+    </div>
   </div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
+  <hr class="w-full mt-4" />
+  <div class="row">
+    <h3 class="text-xl pb-3">product details</h3>
+    <p class="max-w-[450px] break-words">
+      It is a long established fact that a reader will be distracted by the
+      readable content of a page when looking at its layout. The point of using
+      Lorem Ipsum is that it has a more-or-less normal distrib
+    </p>
+  </div>
+  <hr class="w-full mt-4" />
+  <h3 class="text-xl mt-3 mb-3">share it</h3>
+  <div class="row flex">
+    
+    <div class="social border-r border-gray-600">
+      <a href="#" class="fa fa-facebook p-3 hover:text-red-500 h-12 w-12"></a>
+      <a href="#" class="fa fa-twitter p-3 hover:text-red-500 h-12 w-12"></a>
+      <a href="#" class="fa fa-whatsapp p-3 hover:text-red-500 h-12 w-12"></a>
+      <a href="#" class="fa fa-instagram p-3 hover:text-red-500 h-12 w-12"></a>
+    </div>
+
+    <div class="wish flex justify-center items-center">
+      <a href="#" class="fa fa-heart p-3 hover:text-red-500 h-12 w-12"></a>
+      <p>Add To WishList</p>
+    </div>
+  </div>
+  <hr class="w-full mt-4" />
+  <div class="row">
+      <h3 class="text-xl mt-3 mb-3">Time Reminder</h3>
+
+  </div>
 </div>
