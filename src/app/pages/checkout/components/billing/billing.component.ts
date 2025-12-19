@@ -19,7 +19,7 @@ export class BillingComponent implements OnInit{
 
   @Output() formValid = new EventEmitter<FormGroup>();
 
-  billingForm!: FormGroup;
+   billingForm!: FormGroup;
   submitted = false;
 @Input()selectedPayment: string='';
 

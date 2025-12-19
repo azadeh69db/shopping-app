@@ -50,34 +50,3 @@ export class PaypalformComponent {
 }
 
 
-
-// export class PaypalformComponent {
-// paymentForm!: FormGroup;
-//   submitted = false;
-
-//   constructor(private fb: FormBuilder) {}  // ✅ inject فرم بیلدر
-
-//   ngOnInit() {
-//     this.paymentForm = this.fb.group({
-//       shippingMethod: ['', Validators.required],
-
-//       paymentMethod: ['', Validators.required]
-//     });
-//   }
-
-//   get f() {
-//     return this.paymentForm.controls;
-//   }
-
-//   onSubmit() {
-//     this.submitted = true;
-
-//     if (this.paymentForm.invalid) {
-//       return;
-//     }
-
-//     console.log(this.paymentForm.value);
-//   }
-// }
-
-
