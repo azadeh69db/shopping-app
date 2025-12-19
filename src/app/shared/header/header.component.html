@@ -76,7 +76,8 @@
 
     <div class="exampleright text-sm flex items-center space-x-4  ">
  <a href="#" class="flex items-center space-x-2 group" >
-  <button  class="group-hover:text-red-500" matButton [matMenuTriggerFor]="homemenu"  routerLink="">Home</button>
+
+  <button  class="group-hover:text-red-500 " matButton [matMenuTriggerFor]="homemenu"  >Home</button>
 <mat-menu #homemenu="matMenu">
 
   <button mat-menu-item>electronic</button>
@@ -84,7 +85,17 @@
     <button mat-menu-item>mens clothing</button>
         <button mat-menu-item>womens clothing</button>
 </mat-menu>
- <mat-icon class="group-hover:text-red-500"matButton [matMenuTriggerFor]="homemenu" aria-label="Examplekeyboard_arrow_down icon" fontIcon="keyboard_arrow_down  "></mat-icon>
+ <mat-icon class="group-hover:text-red-500 pr-10"matButton [matMenuTriggerFor]="homemenu" aria-label="Examplekeyboard_arrow_down icon" fontIcon="keyboard_arrow_down  "></mat-icon>
+
+
+  <button  class="group-hover:text-red-500" matButton [matMenuTriggerFor]="pagemenu">Pages</button>
+<mat-menu #pagemenu="matMenu">
+
+  <button mat-menu-item routerLink="">Home</button>
+  <button mat-menu-item routerLink="/checkout">Checkout</button>
+    <button mat-menu-item routerLink="/product-detail">ProductDetail</button>
+</mat-menu>
+ <mat-icon class="group-hover:text-red-500"matButton [matMenuTriggerFor]="pagemenu" aria-label="Examplekeyboard_arrow_down icon" fontIcon="keyboard_arrow_down  "></mat-icon>
 
 
   </a>
@@ -100,8 +111,13 @@
 
 
 
+ 
+
     </div>
  
+    
+
+    
  
 </mat-toolbar>
 

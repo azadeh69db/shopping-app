@@ -1,0 +1,39 @@
+<!-- <p>product-detail works!</p>
+ <a href="#" class="flex items-center space-x-2 group" >
+  <button  class="group-hover:text-red-500" matButton [matMenuTriggerFor]="homemenu"  routerLink="">Home</button>
+<mat-menu #homemenu="matMenu">
+
+  <button mat-menu-item>electronic</button>
+  <button mat-menu-item>jewelery</button>
+    <button mat-menu-item>mens clothing</button>
+        <button mat-menu-item>womens clothing</button>
+</mat-menu>
+ <mat-icon class="group-hover:text-red-500"matButton [matMenuTriggerFor]="homemenu" aria-label="Examplekeyboard_arrow_down icon" fontIcon="keyboard_arrow_down  "></mat-icon>
+
+
+  </a> -->
+
+
+<div class="relative  w-48 m-10  boorder border-gray-600 mb-10 ">
+
+  <!-- دکمه Category -->
+  <button
+    (click)="toggleCatMenu()"
+    class="w-full flex items-center  px-4 py-2 bg-gray-100 rounded hover:bg-gray-200">
+    Category
+    <mat-icon class="ml-1">keyboard_arrow_down</mat-icon>
+  </button>
+
+  <!-- منو -->
+  <div
+    *ngIf="isCatMenuOpen"
+    class="absolute w-full left-0 mt-1 w-48 bg-white shadow-md rounded flex flex-col z-50">
+    <button class="px-4 py-2 text-left hover:bg-gray-100">Electronic</button>
+    <button class="px-4 py-2 text-left hover:bg-gray-100">Jewelery</button>
+    <button class="px-4 py-2 text-left hover:bg-gray-100">Mens Clothing</button>
+    <button class="px-4 py-2 text-left hover:bg-gray-100">Womens Clothing</button>
+  </div>
+
+</div>
+
+
