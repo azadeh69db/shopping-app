@@ -1,1 +1,46 @@
-<p>product-detail works!</p>
+<div class="box">
+  <div class="row">
+    <h2 class="text-4xl pb-8">Mens Casual Slim Fit</h2>
+    <div class="price mb-6">
+      <del class="pr-3">39.98$</del>
+      <span class="text-red-600">40%off</span>
+    </div>
+    <span class="text-2xl">15.99$</span>
+  </div>
+  <hr class="w-full mt-6" />
+  <div class="row">
+    <h3 class="text-red-600 text-xl">In Stock</h3>
+    <h3>quantity</h3>
+    <div class="flex items-center gap-3 mt-8 ">
+      <button
+        (click)="decrease()"
+        class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 active:scale-90 disabled:opacity-40 disabled:cursor-not-allowed"
+        [disabled]="count === min"
+      >
+        ◀
+      </button>
+
+      <div
+        class="w-20 h-14 flex items-center justify-center border-2 border-gray-800 rounded-lg text-2xl font-bold select-none"
+      >
+        {{ count }}
+      </div>
+
+      <button
+        (click)="increase()"
+        class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 active:scale-90 disabled:opacity-40 disabled:cursor-not-allowed"
+        [disabled]="count === max"
+      >
+        ▶
+      </button>
+    </div>
+     <div class="button flex mt-5 ">
+ <button class="bg-red-500 mr-5 p-3">Add To Cart</button>
+    <button class="bg-red-500 p-3">BuyNow</button>
+     </div>
+   
+  </div>
+  <div class="row"></div>
+  <div class="row"></div>
+  <div class="row"></div>
+</div>
