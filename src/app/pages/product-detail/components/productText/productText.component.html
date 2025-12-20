@@ -1,6 +1,35 @@
 <mat-tab-group>
   <mat-tab label="Description"> 
     <p class="max-w-[780px] break-words">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p> </mat-tab>
-  <mat-tab label="Video"> Content 2 </mat-tab>
-  <mat-tab label="WriteReview"> Content 3 </mat-tab>
+  <mat-tab label="Video">  </mat-tab>
+  <mat-tab label="WriteReview">
+
+    <div class="startextform mr-10 ">
+      <h5>Rating</h5>
+        <p class="text-yellow-400">★★★★★</p>
+    </div>
+    <form class="example-form flex flex-col">
+      <div class="input flex">
+<mat-form-field class="example-full-width pr-8">
+    <mat-label>name</mat-label>
+    <input matInput placeholder="EnterYourName" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="EnterYourEmail" >
+  </mat-form-field>
+      </div>
+  
+ <mat-form-field class="example-full-width">
+    <mat-label>Review Title</mat-label>
+    <input matInput placeholder="EnterYourReviewSubjects" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Review Title</mat-label>
+    <textarea matInput placeholder="Writ Your Testimonial Here"></textarea>
+  </mat-form-field>
+  <button class="bg-orange-600 w-64 h-20 text-xl text-white-700 ">SUBMIT YOUR REVIEW</button>
+</form>
+
+  </mat-tab>
 </mat-tab-group>
