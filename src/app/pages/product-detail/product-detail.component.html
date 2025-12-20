@@ -24,12 +24,12 @@
     </div>
 
     <div class="feture">
-        <app-productBox  *ngIf="product" [product]="product"></app-productBox>
+        <app-productBox  *ngIf="product" [product]="product"  (addToCartEvent)="addToCart($event)"></app-productBox>
 
     </div>
 </div>
 <div class="textapp mt-8">
-<app-productText  *ngIf="product" [product]="product"></app-productText>
+<app-productText  *ngIf="product" [product]="product" ></app-productText>
 
 </div>
     </div>

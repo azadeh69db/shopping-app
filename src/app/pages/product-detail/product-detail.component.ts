@@ -12,6 +12,8 @@ import { CartService } from '../../services/cart.service';
 import {  ProductService } from '../../services/product.service';
 import type { Product } from '../../models/Product';
 import { NgIf,CommonModule } from '@angular/common';
+import { count } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
@@ -26,14 +28,13 @@ export class ProductDetailComponent {
 // constructor(private route:ActivateRoute){}
 
  product: Product | undefined;
-  quantity: number = 1;
-  min: number = 1;
-  max: number = 100;
+ 
   productId:number|null=null
   constructor(
     private route: ActivatedRoute, // ← حالا شناسایی می‌شود
     private productService: ProductService,
-    private cartService: CartService
+    private cartService: CartService,
+    private router:Router
   ) {}
 
   ngOnInit() {
@@ -48,19 +49,16 @@ export class ProductDetailComponent {
     window.scrollTo({top:0,behavior:'smooth'})
   }
 
-  increase() {
-    if (this.quantity < this.max) this.quantity++;
-  }
+ 
 
-  decrease() {
-    if (this.quantity > this.min) this.quantity--;
-  }
-
-  addToCart() {
+  addToCart(count:number) {
     if (this.product) {
-      this.cartService.addToCart(this.product, this.quantity);
+      this.cartService.addToCart(this.product, count);
       alert('محصول به سبد خرید اضافه شد');
     }
+
+    console.log(this.cartService.getCartItems());
+this.router.navigate(['/cart'])
   }
 
 }

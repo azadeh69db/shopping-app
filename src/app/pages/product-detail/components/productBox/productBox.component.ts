@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TimerComponent } from '../Timer/Timer.component';
 import type { Product } from '../../../../models/Product';
 @Component({
@@ -15,15 +15,21 @@ count:number = 1;
   min:number = 1;
   max:number = 100;
 
-  increase() {
-    if (this.count < this.max) {
-      this.count++;
+  
+
+
+  
+  @Output() addToCartEvent = new EventEmitter<number>(); // تعداد یا فقط سیگنال
+
+ 
+
+  increase() { if (this.count < this.max) this.count++; }
+  decrease() { if (this.count > this.min) this.count--; }
+
+  addToCart() {
+    if (this.product) {
+      this.addToCartEvent.emit(this.count); // اطلاع والد
     }
   }
 
-  decrease() {
-    if (this.count > this.min) {
-      this.count--;
-    }
-  }
 }

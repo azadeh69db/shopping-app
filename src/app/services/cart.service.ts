@@ -40,4 +40,10 @@ private items: CartItem[] = [];
   clearCart() {
     this.items = [];
 }
+
+
+
+
+
+
 }

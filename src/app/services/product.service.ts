@@ -5,6 +5,7 @@ import type{ Product} from '../models/Product';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
+  [x: string]: any;
   private apiUrl = 'https://fakestoreapi.com/products';
 
   // BehaviorSubject برای آی‌دی فعلی محصول
