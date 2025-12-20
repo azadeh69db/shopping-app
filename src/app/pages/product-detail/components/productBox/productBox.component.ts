@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TimerComponent } from '../Timer/Timer.component';
+import type { Product } from '../../../../models/Product';
 @Component({
   selector: 'app-productBox',
   standalone: true,
@@ -8,9 +9,11 @@ import { TimerComponent } from '../Timer/Timer.component';
   styleUrl: './productBox.component.css'
 })
 export class productBoxComponent {
-count = 1;
-  min = 1;
-  max = 100;
+  @Input()product?:Product;
+[x: string]: any;
+count:number = 1;
+  min:number = 1;
+  max:number = 100;
 
   increase() {
     if (this.count < this.max) {

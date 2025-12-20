@@ -13,7 +13,7 @@ export const routes: Routes = [
     component:CheckoutComponent
    },
    {
-     path:'product-detail',
+     path:'products/:id',
     component:ProductDetailComponent
    }
 ];
