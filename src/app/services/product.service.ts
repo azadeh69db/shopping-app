@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product} from '../models/Product';
+import type{ Product} from '../models/Product';
 
 // export interface Product {
 //  id: number;
@@ -29,5 +29,6 @@ export class ProductService {
 
   // گرفتن محصول با آیدی
   getProductById(id: number): Observable<Product> {
+
   return this.httpClient.get<Product>('${this.apiUrl}/${id}')}
 }

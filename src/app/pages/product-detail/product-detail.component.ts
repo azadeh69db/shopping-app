@@ -11,13 +11,14 @@ import { relatedProductComponent } from './components/relatedProduct/relatedProd
 import { CartService } from '../../services/cart.service';
 import {  ProductService } from '../../services/product.service';
 import type { Product } from '../../models/Product';
+import { NgIf,CommonModule } from '@angular/common';
 @Component({
   selector: 'app-product-detail',
   standalone: true,
   imports: [categoryComponent, RouterLink,
     freeShipingComponent, newProductComponent,
-    productBoxComponent, HeaderComponent, FooterComponent
-  ,productTextComponent,relatedProductComponent ],
+    productBoxComponent, HeaderComponent, FooterComponent,
+    productTextComponent, relatedProductComponent, NgIf,CommonModule],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })
