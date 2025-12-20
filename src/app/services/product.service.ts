@@ -18,7 +18,7 @@ export class ProductService {
   }
 
   getProductById(id: number): Observable<Product> {
-    return this.httpClient.get<Product>(`${this.apiUrl}/${id} `);
+    return this.httpClient.get<Product>(`${this.apiUrl}/${id}`);
   }
 
   // متد برای آپدیت آی‌دی فعلی محصول

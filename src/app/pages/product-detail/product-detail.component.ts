@@ -42,6 +42,7 @@ export class ProductDetailComponent {
       this.productId=id;
       this.productService.getProductById(id).subscribe(res => {
         this.product = res;
+        console.log('product data' , this.product)
       });
     });
   }
