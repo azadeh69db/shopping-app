@@ -54,7 +54,7 @@ export class ProductDetailComponent {
   addToCart(count:number) {
     if (this.product) {
       this.cartService.addToCart(this.product, count);
-      alert('محصول به سبد خرید اضافه شد');
+      // alert('محصول به سبد خرید اضافه شد');
     }
 
     console.log(this.cartService.getCartItems());
