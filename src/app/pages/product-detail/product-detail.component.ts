@@ -29,7 +29,7 @@ export class ProductDetailComponent {
   quantity: number = 1;
   min: number = 1;
   max: number = 100;
-
+  productId:number|null=null
   constructor(
     private route: ActivatedRoute, // ← حالا شناسایی می‌شود
     private productService: ProductService,
@@ -39,6 +39,7 @@ export class ProductDetailComponent {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const id = Number(params.get('id'));
+      this.productId=id;
       this.productService.getProductById(id).subscribe(res => {
         this.product = res;
       });

@@ -1,35 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import type{ Product} from '../models/Product';
-
-// export interface Product {
-//  id: number;
-//   title: string;
-//   price: number;
-//   description: string;
-//   category: string;
-//   image: string;
-//   rating?: {
-//     rate: number;
-//     count: number;
-//   };
-// }
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
   private apiUrl = 'https://fakestoreapi.com/products';
 
+  // BehaviorSubject برای آی‌دی فعلی محصول
+  private currentProductIdSubject = new BehaviorSubject<number | null>(null);
+  currentProductId$ = this.currentProductIdSubject.asObservable();
+
   constructor(private httpClient: HttpClient) {}
 
-  // گرفتن همه محصولات
   getProducts(): Observable<Product[]> {
     return this.httpClient.get<Product[]>(this.apiUrl);
   }
 
-  // گرفتن محصول با آیدی
   getProductById(id: number): Observable<Product> {
+    return this.httpClient.get<Product>(`${this.apiUrl}/${id} `);
+  }
 
-  return this.httpClient.get<Product>('${this.apiUrl}/${id}');
+  // متد برای آپدیت آی‌دی فعلی محصول
+  setCurrentProductId(id: number) {
+    this.currentProductIdSubject.next(id);
   }
 }
+
