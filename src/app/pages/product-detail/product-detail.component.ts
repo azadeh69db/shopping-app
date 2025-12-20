@@ -45,6 +45,7 @@ export class ProductDetailComponent {
         console.log('product data' , this.product)
       });
     });
+    window.scrollTo({top:0,behavior:'smooth'})
   }
 
   increase() {

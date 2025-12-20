@@ -1,13 +1,16 @@
 <h1 class="text-center text-2xl p-7">Trending Products</h1>
+<h1 class="text-center text-xl p-7">click image for see productDetail</h1>
+
 <hr />
 
 <div class="imgproduct  p-10 pt-20 flex flex-wrap justify-center gap-10"
     >
       <!-- محصول -->
-      <div class="product-card relative group w-64 h-80 mb-20 justify-center items-center" >
-        <img
+      <div class="product-card relative group w-64 h-80 mb-20 justify-center items-center"  [routerLink]="['/products',3]">
+        <img 
           class="w-full h-full object-cover rounded-lg bg-white"
           src="assets/6.png"
+
           alt=""
         />
         <div
@@ -40,10 +43,10 @@
         <strong>$109.95</strong>
       </div>
 
-      <div class="product-card relative group w-64 h-80 justify-center items-center">
+      <div class="product-card relative group w-64 h-80 justify-center items-center " [routerLink]="['/products',2]">
         <img
           class="w-full h-full object-cover rounded-lg bg-white"
-          src="assets/2.png"
+          src="assets/5.png"
           alt=""
         />
         <div
@@ -75,10 +78,10 @@
         <strong>$109.95</strong>
       </div>
 
-      <div class="product-card relative group w-64 h-80">
+      <div class="product-card relative group w-64 h-80" [routerLink]="['/products',6]">
         <img
           class="w-full h-full object-cover rounded-lg bg-white"
-          src="assets/7.png"
+          src="assets/10.png"
           alt=""
         />
         <div
@@ -109,10 +112,10 @@
         <h4>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h4>
         <strong>$109.95</strong>
       </div>
-      <div class="product-card relative group w-64 h-80">
+      <div class="product-card relative group w-64 h-80"[routerLink]="['/products',9]">
         <img
           class="w-full h-full object-cover rounded-lg bg-white"
-          src="assets/6.png"
+          src="assets/7.png"
           alt=""
         />
         <div
