@@ -23,41 +23,6 @@ import { NgIf,CommonModule } from '@angular/common';
   styleUrl: './product-detail.component.css'
 })
 export class ProductDetailComponent {
-// constructor(private route:ActivateRoute){}
 
- product: Product | undefined;
-  quantity: number = 1;
-  min: number = 1;
-  max: number = 100;
-
-  constructor(
-    private route: ActivatedRoute, // ← حالا شناسایی می‌شود
-    private productService: ProductService,
-    private cartService: CartService
-  ) {}
-
-  ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      const id = Number(params.get('id'));
-      this.productService.getProductById(id).subscribe(res => {
-        this.product = res;
-      });
-    });
-  }
-
-  increase() {
-    if (this.quantity < this.max) this.quantity++;
-  }
-
-  decrease() {
-    if (this.quantity > this.min) this.quantity--;
-  }
-
-  addToCart() {
-    if (this.product) {
-      this.cartService.addToCart(this.product, this.quantity);
-      alert('محصول به سبد خرید اضافه شد');
-    }
-  }
 
 }

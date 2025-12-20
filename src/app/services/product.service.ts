@@ -30,5 +30,6 @@ export class ProductService {
   // گرفتن محصول با آیدی
   getProductById(id: number): Observable<Product> {
 
-  return this.httpClient.get<Product>('${this.apiUrl}/${id}')}
+  return this.httpClient.get<Product>('${this.apiUrl}/${id}');
+  }
 }
