@@ -20,16 +20,16 @@
     <div class="right">
 <div class="imgtext flex justify-center ">
  <div class="img p-10">
-     <img src="assets/2.png" alt="" class="w-64">
+     <img src="product?.image" alt="" class="w-64">
     </div>
 
     <div class="feture">
-        <app-productBox   [product]="product"></app-productBox>
+        <app-productBox  *ngIf="product" [product]="product"></app-productBox>
 
     </div>
 </div>
 <div class="textapp mt-8">
-<app-productText></app-productText>
+<app-productText ></app-productText>
 
 </div>
     </div>

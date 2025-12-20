@@ -1,6 +1,6 @@
 <div class="box">
   <div class="row">
-    <h2 class="text-4xl pb-8">Mens Casual Slim Fit</h2>
+    <h2 class="text-4xl pb-8">{{product?.title}}</h2>
     <div class="price mb-6">
       <del class="pr-3">{{product?.price}}</del>
       <span class="text-red-600">40%off</span>
@@ -41,11 +41,9 @@
   </div>
   <hr class="w-full mt-4" />
   <div class="row">
-    <h3 class="text-xl pb-3">{{product?.description}}</h3>
+    <h3 class="text-xl pb-3">ProductDetails</h3>
     <p class="max-w-[450px] break-words">
-      It is a long established fact that a reader will be distracted by the
-      readable content of a page when looking at its layout. The point of using
-      Lorem Ipsum is that it has a more-or-less normal distrib
+    {{product?.description}}
     </p>
   </div>
   <hr class="w-full mt-4" />
