@@ -1,6 +1,6 @@
 
 <app-header></app-header>
-<div *ngIf="items.length === 0">cart is empty</div>
+<div *ngIf="items.length === 0" class="text-4xl">cart is empty</div>
 <div *ngFor="let item of items" class="mb-4 border p-3 rounded">
   <h3>{{item.title}}</h3>
   <p>price: {{item.price}} × count: {{item.quantity}}</p>
